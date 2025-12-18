@@ -4,7 +4,7 @@
 The activities completed in this lab were based on the week 5 lab and provied experience with using pipes,FIFOs and communication through files. This explores the communication mechanisms within the environment.
 
 ## Pipes and Redirection
-Pipes and redirection allow processes to communicate by passing the ouptut of one command directly to the other, and reducing the need for intermediate files [3].
+Pipes and redirection allow processes to communicate by passing the ouptut of one command directly to the other, and reducing the need for intermediate files.
 
 ### Standard Output and Redirection
 Standard output redirection was demonstrated using:
@@ -16,10 +16,10 @@ cat output.txt
 It was tested using:
 ls /nonexistent 2> error.txt
 
-These techniques are used mainly for logging and error handling in Linux systems [6].
+These techniques are used mainly for logging and error handling in Linux systems.
 
 ## Using Pipes
-The screenshot below demonstrates the use of pipes and redirection. It shows how multiple processes can be linked together to analyse output in an effective way using pipes. Pipelines allow inter-processing communictation to run efficiently by passing output streams directly between commands [3], [6].
+The screenshot below demonstrates the use of pipes and redirection. It shows how multiple processes can be linked together to analyse output in an effective way using pipes. Pipelines allow inter-processing communictation to run efficiently by passing output streams directly between commands.
 
 **Commands Used**
 ls -l | grep "txt"
@@ -36,7 +36,7 @@ These commands used together shows:
 ![Pipes and Redirection Evidence](images/week2/Pipes.png)
 
 ## Named Pipes 
-Named pipes provide a mechanism that allows processes that are unrelated to communicate [3]. The screenshot below will show the creation and use of a named pipe to allow communication between two terminal sessions. One process writes the data into the FIFO while the other process reads from it in real-time, confirming real-time communication between unrelated processes [3], [4]
+Named pipes provide a mechanism that allows processes that are unrelated to communicate [1]. The screenshot below will show the creation and use of a named pipe to allow communication between two terminal sessions. One process writes the data into the FIFO while the other process reads from it in real-time, confirming real-time communication between unrelated processes.
 
 **Commands Used**
 mkfifo mypipe
@@ -55,12 +55,12 @@ tail -f mypipe
 These outputs confirm that the messages written was successfully received by the reading process. 
 
 ## Difference Between Pipes and Named Pipes
--Anonymous pipes (|) are temporary and exist only durng the command execution
+-Anonymous pipes (|) are temporary and exist only during the command execution
 
 -Named pipes (FIFOs) persist as files and allows communication bewtween processes that are unrelated. They are useful for longer running or for communication with multiple terminals
 
 ## Process Signals
-Signals were used to control and manage running processes. Signals such as SIGTERM and SIGKILL allow processes to terminate either gracefully or forcefully [5]. Signal handling is important for programs to ensure that resources are released correctly during termination [1].
+Signals were used to control and manage running processes. Signals such as SIGTERM and SIGKILL allow processes to terminate either gracefully or forcefully [2]. Signal handling is important for programs to ensure that resources are released correctly during termination [1].
 
 ## Signal Testing
 Signals were explored using the following commands:
@@ -84,7 +84,7 @@ The producer script wrote data to a shared file while using a lock file to preve
 DATAFILE="shared_data.txt"
 LOCKFILE="data.lock"
 
-The use of lock file ensurs that only one process accesses the shred resource at a time, which prevents data corruption [4].
+The use of lock file ensurs that only one process accesses the shred resource at a time, which prevents data corruption [2].
 
 ## Evidence Screenshot
 ![Producer Script](images/week2/P_Script.png)
@@ -106,5 +106,7 @@ Implementing these IPC mechanisms in this week highlighted the importance of coo
 
 ## References
 [1] M. Kerrisk, The Linux Programming Interface. San Francisco, CA, USA: No Starch Press, 2010.
-[2] The Linux Documentation Project, "Pipes and FIFOs", 2023 [Online]. Available: https://tldp.org/LDP/lpg/node11.html. [Accessed: Dec. 11, 2025].
+[2] The Linux Documentation Project, "Pipes and FIFOs", 2023 [Online]. Available: https://tldp.org/LDP/lpg/node11.html. [Accessed: Dec. 10, 2025].
+
+
 
