@@ -12,3 +12,19 @@ top
 
 **ps aux**
 The ps aux command displays a complete list of all running processes on the ubuntu server. This output includes system and user processes, showing their process IDs (PID), ownership, CPU usage etc. In my screenshot, the results confirm that core system services are running under the root user, while the user-level processes are isolated appropriately which supports the principle of least priviledge.
+
+**Explanation of Key Columns**
+-User: Owner of process
+-PID: a unique Process ID
+-%CPU: CPU usage
+-%MEM: Memory usage
+-STAT: Current process state
+-COMMAND: the command that launched the process
+
+**Common Process States**
+-R: Running
+-S: Sleeping
+-D: Uninterruptible sleep (I/O)
+-T: Stopped (Ctrl+Z)
+-Zombie: terminated
+
