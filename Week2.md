@@ -19,4 +19,20 @@ ls /nonexistent 2> error.txt
 These techniques are used mainly for logging and error handling in Linux systems [8].
 
 ## Using Pipes
-The screenshot below demonstrates
+The screenshot below demonstrates the use of pipes and redirection. It shows how multiple processes can be linked together to analyse output in an effective way using pipes. Pipelines allow inter-processing communictation to run efficiently by passing output streams directly between commands [4], [9].
+
+**Commands Used**
+ls -l | grep "txt"
+ps aux | grep "bash" | wc -l
+sudo cat /var/log/auth.log | grep "Failed" | tail -10
+cat /etc/passwd | cut -d: -f1,3 | sort -t: -k2 -n | tail
+
+These commands used together shows:
+-Commands output being filtered using grep
+-Processes being counted using wc
+-Analysing the logs and failed login attempts
+
+## Evidence Screenshot
+![Pipes and Redirection Evidence](images/week2/Pipes.png)
+
+
