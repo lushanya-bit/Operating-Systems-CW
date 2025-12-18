@@ -66,7 +66,7 @@ The commands below were executed on the server to verify system specifications
 -`ip addr`
 
 ##Evidence
-![Week 1 CLI Evidence](images/week1/Screenshot 2025-12-10 155001 .png)
+![Week 1 CLI Evidence](images/week1/Screenshot_2025-12-10_155001 .png)
 ---
 
 ##Reflection
