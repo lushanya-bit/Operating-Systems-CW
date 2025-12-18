@@ -5,16 +5,25 @@ This week focuses on planning the environments that will be used and selecting s
 ---
 ## System Architecture Diagram
 
-```mermaid
-graph TD
-  A[Host Machine</>Windows OS] --> B[PowerShell</>SSH Client]
++----------------------------------+
+|          Host Machine            |
+|          (Windows OS)            |
+|                                  |
+|        PowerShell (SSH Client)   |
++-----------------+----------------+
+                  |
+                  |SSH
+                  |
++-----------------V----------------+
+|        Ubuntu Server VM          |
+|      (24.04.43 LTS, Headless)    |
+|                                  |
+|      Firewall: SSH only          |
++----------------------------------+
+                  |
+                Virtual Box
 
-  A --> C[VirtualBox]
-  C --> D[Ubuntu Server 24.04 LTS</>Headles Server VM]
-
-  B -->|SSH| D
-
-  D -->|Firewall: SSH only| D
+This system architecture follows a client-server model. The Ubuntu Server runs as a headless virtual machine hosted in VirtualBox. The host machine running Windows acts as  the workstation, using PowerShell as a SSH client to administer the server. Firewall rules on the server restricts access to SSH only which improves security.
 
 ## Server Distribution  
 **Chosen Distribution:** Ubuntu Server 24.04.03 LTS
@@ -57,7 +66,7 @@ The commands below were executed on the server to verify system specifications
 -`ip addr`
 
 ##Evidence
-![Week 1 CLI Evidence](images/week/1/Screenshot_2025-12-10_155001.png)
+![Week 1 CLI Evidence](images/week1/Screenshot_2025-12-10_155001.png)
 ---
 
 ##Reflection
