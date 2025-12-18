@@ -89,3 +89,12 @@ This enables passwordless authentication, improving security by eliminating pass
 ![Passwordless Authentication](images/week3/Passwordless.png)
 
 
+**SSH Configuration Hardening**
+The SSH configuration was hardened by modyfing /etc/ssh/sshd_config and making these changes:
+PasswordAuthentication no
+PubkeyAuthentication yes
+PermitRootLogin no
+
+These changes prevent brute force password attacks, enforces key based authentication, and protects the root account from direct access.
+
+## Firewall Configuration
