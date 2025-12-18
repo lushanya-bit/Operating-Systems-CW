@@ -34,7 +34,44 @@ The ps aux command displays a complete list of all running processes on the ubun
 ![PS Aux](images/week3/ps_aux.png)
 
 **Real-time process monitoring (top)**
-top was used to observe the real time CPU and memory usage dynamically. This allowed identification of high-resource processes and sytem load trends.
+top was used to observe the real time CPU and memory usage dynamically. This allowed identification of high-resource processes and sytem load trends. It provides a view that continuosly updates the running processes, CPU usage, memory consumption, process priority, runtime and the current state. In the screenshot below, it shows that most processes are owned by the root user which represents core system services. CPU utilisation is low, which indicates that the server is operating efficiently. Unlike ps aux, top is used to for live monitoring.
 
 ## Evidence Screenshot
-![Top](images/week3/
+![Top](images/week3/Top_screenshot.png)
+
+##Process Hierarchy
+**Commands Used**
+pstree
+pstree -p
+
+## Bg and Fg Execution
+**Commands Used**
+sleep 300 &
+jobs
+sleep 500
+bg
+fg
+
+## Process Termination
+**Commands Used**
+kill <PID>
+killall sleep
+
+## Process Priority
+**Commands Used**
+nice -n 10 sleep 400 &
+top
+
+## Explanation
+-Foreground processes require user interaction
+-Background processes allow multitasking
+-kill sends SIGTERM gracefully
+-kill -9 sends SIGKILL forcefully (unsafe if not used properly)
+-nice adjusts scheduling priority to reduce CPU impact
+
+**pstree**
+This visualises the relationship between processes, and highlights how they are managed by the system.
+
+## SSH Configuration
+
+
