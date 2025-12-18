@@ -5,7 +5,10 @@ This week focuses on understanding the process management of Linux and implement
 ---
 
 ## Process States
-## Commands used
+**Commands used**
 ps aux
 ps -ef
 top
+
+**ps aux**
+The ps aux command displays a complete list of all running processes on the ubuntu server. This output includes system and user processes, showing their process IDs (PID), ownership, CPU usage etc. In my screenshot, the results confirm that core system services are running under the root user, while the user-level processes are isolated appropriately which supports the principle of least priviledge.
