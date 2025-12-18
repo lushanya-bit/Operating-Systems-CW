@@ -73,5 +73,19 @@ top
 This visualises the relationship between processes, and highlights how they are managed by the system.
 
 ## SSH Configuration
+**SSH Key generation**
+SSH keys were generated on the workstation using the Ed25519 method and the results were as shown below:
+
+![SSH Key Generation](images/week3/Key_gen.png)
+
+Ed25519 keys provide stronger security and better performance compared to older RSA keys, making them the recommended choice for modern systems.
+
+**Copying the Key to the Server** 
+The public key was copied using:
+ssh-copy-id username@server_ip
+This enables passwordless authentication, improving security by eliminating password-based login attacks. However, even though the system became passwordless, I was still prompted to enter my passphrase . This is because the passphrase protects the private SSH key and not the server.
+
+## Evidence Screenshot
+![Passwordless Authentication](images/week3/Passwordless.png)
 
 
