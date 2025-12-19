@@ -30,3 +30,14 @@ This script was created to summarise AppArmor status. The script confirms that A
 -**MAC** enforces centrally defined security policies that cannot be override by users.
 
 ## Intrusion Detection with fail2ban
+
+fail2ban was installed and configured for the purpose of protecting the SSH from brute force attacks by monitoring authentication logs and banned IP addresses.
+
+## Monitoring fail2ban activity
+
+![fail2ban Status](images/week4/fail2ban_stat.png)
+
+![Active jails](images/week4/active_jail.png)
+
+These confirm any active jails.
+
