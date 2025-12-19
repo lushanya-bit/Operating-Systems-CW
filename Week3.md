@@ -128,8 +128,24 @@ sudo usermod -aG sudo adminuser
 
 ## Evidence Screenshot
 
+![User Creation](images/week3/user_creation.png)
+
 **Verifying User**
 groups adminuser
 id adminuser
 getent group sudo
+
+## Evidence Screenshot
+
+![User Verification](images/week/getent.png)
+
+**Principle of Least Priviledge**
+Administrative tasks are performed using a non-root account, limiting damage from compromise.
+
+## Remote Administration
+
+## Evidence Screenshot
+
+
+
 
