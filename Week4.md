@@ -41,3 +41,48 @@ fail2ban was installed and configured for the purpose of protecting the SSH from
 
 These confirm any active jails.
 
+## Automatic Security Updates
+
+Automatic security updates were enabled using the `unattended-upgrades` package. This ensure that all critical patches are applied, reducing and exposure to known vulnerabilities.
+
+## Evidence Screenshot
+
+![Automatic Security](images/week4/upgrade_log.png)
+
+## Security Baseline Script
+
+My comprehensive security baseline script is shown below:
+
+## Security Script:
+
+![Security Baseline Script 1](images/week4/security_script1.png)
+![Security Baseline Script 2](images/week4/security_script2.png)
+
+## The Execution:
+
+![Script Execution](images/week4/security_execution.png)
+
+## The Report:
+
+![Security Report 1](images/week4/security_report.png)
+![Security Report 2](images/week4/security_report2.png)
+![Security Report 3](images/week4/security_report3.png)
+
+
+## Remote Monitoring Script
+
+My remote monitoring script can be shown below:
+
+## Monitoring Script
+
+![Monitoring Script 1](images/week4/monitor_script1.png)
+![Monitoring Script 2](images/week4/monitor_script2.png)
+![Monitoring Script 3](images/week4/monitor_script3.png)
+![Monitoring Script 4](images/week4/monitor_script4.png)
+
+## Monitoring Report
+
+![Monitoring Report](images/week4/monitor_report.png)
+
+## Reflection
+This week highlighted how layered the system's security is. My main challenge this week was understanding how specifc AppArmor rules translates into real system restrictions.
