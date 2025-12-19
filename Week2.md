@@ -36,7 +36,7 @@ These commands used together shows:
 ![Pipes and Redirection Evidence](images/week2/Pipes.png)
 
 ## Named Pipes 
-Named pipes provide a mechanism that allows processes that are unrelated to communicate [1]. The screenshot below will show the creation and use of a named pipe to allow communication between two terminal sessions. One process writes the data into the FIFO while the other process reads from it in real-time, confirming real-time communication between unrelated processes.
+Named pipes provide a mechanism that allows processes that are unrelated to communicate. The screenshot below will show the creation and use of a named pipe to allow communication between two terminal sessions. One process writes the data into the FIFO while the other process reads from it in real-time, confirming real-time communication between unrelated processes.
 
 **Commands Used**
 mkfifo mypipe
@@ -60,7 +60,7 @@ These outputs confirm that the messages written was successfully received by the
 -Named pipes (FIFOs) persist as files and allows communication bewtween processes that are unrelated. They are useful for longer running or for communication with multiple terminals
 
 ## Process Signals
-Signals were used to control and manage running processes. Signals such as SIGTERM and SIGKILL allow processes to terminate either gracefully or forcefully [2]. Signal handling is important for programs to ensure that resources are released correctly during termination [1].
+Signals were used to control and manage running processes. Signals such as SIGTERM and SIGKILL allow processes to terminate either gracefully or forcefully. Signal handling is important for programs to ensure that resources are released correctly during termination
 
 ## Signal Testing
 Signals were explored using the following commands:
@@ -75,7 +75,7 @@ Processes were also suspended and resumed using:
 -fg
 
 ## File-Based Communication
-File-based communication was shown using a producer and consumer script. It shows indirect communication through a shared storage and highlights the need for synchronisation [1].
+File-based communication was shown using a producer and consumer script. It shows indirect communication through a shared storage and highlights the need for synchronisation.
 
 ## Producer Script 
 The producer script wrote data to a shared file while using a lock file to prevent race conditions. The script uses a lock file to prevent race conditions:
@@ -84,7 +84,7 @@ The producer script wrote data to a shared file while using a lock file to preve
 DATAFILE="shared_data.txt"
 LOCKFILE="data.lock"
 
-The use of lock file ensurs that only one process accesses the shred resource at a time, which prevents data corruption [2].
+The use of lock file ensurs that only one process accesses the shred resource at a time, which prevents data corruption.
 
 ## Evidence Screenshot
 ![Producer Script](images/week2/P_Script.png)
@@ -104,9 +104,6 @@ The producer and consumer scripts were executed and they demonstrated coordinate
 ## Reflection
 Implementing these IPC mechanisms in this week highlighted the importance of coordination, locking and signal handling to prevent race conditions and ensure that the data exchange is reliable. These concepts are fundamental to programming and an operating system design that is secure. 
 
-## References
-[1] M. Kerrisk, The Linux Programming Interface. San Francisco, CA, USA: No Starch Press, 2010.
-[2] The Linux Documentation Project, "Pipes and FIFOs", 2023 [Online]. Available: https://tldp.org/LDP/lpg/node11.html. [Accessed: Dec. 10, 2025].
 
 
 
