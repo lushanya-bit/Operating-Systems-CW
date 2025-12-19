@@ -146,6 +146,11 @@ Administrative tasks are performed using a non-root account, limiting damage fro
 
 ## Evidence Screenshot
 
+![Administration 1](images/week3/ssh1.png)
 
+![Administration 2](images/week3/ssh2.png)
+
+## Reflection
+One challenge I faced was installing the SSH to my workstation and connecting it to my server. One of the reasons this did not work for me was ssh was disables on my device, so I then had to enable it. In this lab I learnt the importance of layered security, including SSH hardening, firewall restrictions and least priviledge user management.
 
 
