@@ -7,7 +7,7 @@ This week focuses on conducting a security audit on the system and implementing 
 ## Initial Security Audit
 Lynis was installed and executed on the server to perform a full security audit:
 
-![Lynis Audit](images/week5/lynis_audit)
+![Lynis Audit](images/week5/lynis_audit.png)
 
 The audit examined system configuration, authentication mechanisms, file permissions, kernel parameters and installed services. The final hardening index `59` was recorded as a baseline for comparison.
 
