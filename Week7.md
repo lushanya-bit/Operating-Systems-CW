@@ -4,7 +4,7 @@
 This week focused on analysing network configuration, and performance within the environment.
 ---
 
-## Network Configuration
+### Network Configuration
 
 Network interfaces were identified and analysed using:
 ip addr show
