@@ -98,3 +98,38 @@ PermitRootLogin no
 These changes prevent brute force password attacks, enforces key based authentication, and protects the root account from direct access.
 
 ## Firewall Configuration
+
+**Commands used**
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow from <workstation_ip> to any port 22
+sudo ufw enable
+sudo ufw status numbered
+
+## Firewall Rules Table
+Rule                      |Purpose                    |Security Benefit          |
+---------------------------------------------------------------------------------|
+Deny Incoming             |Block unsolicited traffic  |Prevents scanning         |
+Allow Outgoing            |Enable updates             |System usability          |
+Allow SSH from workstation|Restricted access          |Prevents lateral attacks  |
+
+## Evidence Screenshots
+
+![UFW Rules](images/week3/ufw_rules.png)
+
+![UFW Status](images/week3/ufw_status.png)
+
+![UFW on Workstation](images/week3/ufw_workstation.png)
+
+## User Management
+**User Creation**
+sudo adduser adminuser
+sudo usermod -aG sudo adminuser
+
+## Evidence Screenshot
+
+**Verifying User**
+groups adminuser
+id adminuser
+getent group sudo
+
