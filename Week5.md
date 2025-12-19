@@ -69,9 +69,14 @@ File system was enhanced by securing shared memory with noexec, nodev, and nosui
 Password policies were strengthened to require a  minimum length of 12 characters, uppercase, lowercase, numeric and special characters, password expires every 90 days and account locks afte repeated login attempts.
 
 ## Post-Hardening Assessment:
+**Re-running Lynis**
+After implementing hardening measures, Lynis was exceuted again. I placed the results in a table below comparing them to the base results.
 
-## Security Audit Report
+          |Index    |Tests performed  |Suggestions|Warning|
+----------------------------------------------------------
+Initial   |59       |256              |48         |1      |
+Hardening |62       |259              |45         |2      |
 
-## Network Security:
 
 ## Reflection
+One challenged I faced this week was during firewall verification, an intial attempt to execute sudo commands through a non-interactive SSH session failed. This highlighted the requirement for a TTY when using sudo. Which also showed the importance of understanding priviledge escalations.
